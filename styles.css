@@ -445,3 +445,52 @@ html {
     color: var(--text-secondary);
 }
 
+/* Install section */
+#install .install-hint {
+  margin: 0.25rem 0 1rem;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+.install-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.install-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #ddd);
+  background: var(--card, #f8f8f8);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.08s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.install-btn i { font-size: 1.1rem; }
+.install-btn:hover { transform: translateY(-1px); }
+.install-btn:active { transform: translateY(0); }
+
+.install-btn .badge {
+  display: none;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-border, #5aa8ff);
+  background: var(--accent-bg, rgba(90,168,255,0.12));
+}
+
+/* Show badge only on the recommended button */
+.install-btn.recommended .badge { display: inline-block; }
+
+/* Optional: tweak colors in dark mode if you have a dark theme class */
+.dark .install-btn {
+  border-color: #2d2d2d;
+  background: #191919;
+}
+.dark .install-btn .badge {
+  border-color: #6aa6ff;
+  background: rgba(106,166,255,0.18);
+}
+
