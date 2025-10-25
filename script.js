@@ -96,3 +96,28 @@ console.log('%c👋 Hello! This presentation page was built with HTML, CSS, and 
 console.log('%cDeveloped for Alberto Rosselli - Senior IT Specialist', 
     'color: #5a6268; font-size: 14px;');
 
+// Auto-detect browser and highlight the right install button
+(function () {
+  const ua = navigator.userAgent || "";
+  const isEdge = /\bEdg\//.test(ua);
+  const isChrome = !isEdge && /\bChrome\//.test(ua) && /\bEdg\//.test(ua) === false;
+
+  const btnChrome = document.getElementById("btnChrome");
+  const btnEdge = document.getElementById("btnEdge");
+  const wrap = document.querySelector(".install-buttons");
+
+  // Hide both "Recommended" badges by default
+  [btnChrome, btnEdge].forEach(btn => btn && btn.classList.remove("recommended"));
+
+  if (isEdge && btnEdge) {
+    btnEdge.classList.add("recommended");
+    wrap?.setAttribute("data-browser-detected", "edge");
+  } else if (isChrome && btnChrome) {
+    btnChrome.classList.add("recommended");
+    wrap?.setAttribute("data-browser-detected", "chrome");
+  } else {
+    wrap?.setAttribute("data-browser-detected", "unknown");
+  }
+})();
+
+
