@@ -535,4 +535,17 @@ html {
   left: -9999px !important;
 }
 
+.goog-te-gadget {
+  font-size: 0;
+}
+.goog-te-gadget span {
+  display: none;
+}
+#google_translate_element select {
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 14px;
+}
+
+
 
