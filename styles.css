@@ -528,3 +528,11 @@ html {
 .dark .contact-form textarea,
 .dark .link-btn { border-color: #2d2d2d; background: #191919; }
 
+.hp-field {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+
