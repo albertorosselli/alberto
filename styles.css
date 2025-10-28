@@ -494,3 +494,37 @@ html {
   background: rgba(106,166,255,0.18);
 }
 
+/* Contact form (matches existing card/button style) */
+.contact-form { max-width: 720px; }
+.form-row { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.form-row label { font-weight: 600; }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="url"],
+.contact-form input[type="tel"],
+.contact-form input[type="search"],
+.contact-form input[type="password"],
+.contact-form textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #ddd);
+  background: var(--card, #f8f8f8);
+  outline: none;
+}
+.contact-form textarea { resize: vertical; }
+
+.checkbox-row .checkbox { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
+.checkbox-row input { transform: translateY(1px); }
+
+.form-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.link-btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600;
+  padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border, #ddd); background: transparent;
+}
+.form-status { margin-top: 8px; font-size: 0.95rem; opacity: 0.9; }
+
+/* Dark theme tweaks */
+.dark .contact-form input,
+.dark .contact-form textarea,
+.dark .link-btn { border-color: #2d2d2d; background: #191919; }
+
